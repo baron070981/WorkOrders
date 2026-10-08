@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WorkOrders</string>
+    <string name="app_name_ru">Заявки</string>
+    <string name="widget_discription">кол-во невыпоненных заявок</string>
+</resources>

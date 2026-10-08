@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#A5C1BA</color>
+    <color name="bg_item">#ffffffff</color>
+    <color name="not_completed">#ffffffff</color>
+    <color name="completed">#ffffffff</color>
+    <color name="primary_textcolor">@color/black</color>
+    <color name="marker_not_complete">#BA0909</color>
+    <color name="bg_topbar">#3E3E40</color>
+    <color name="border_color_edittext1">#54472A</color>
+    <color name="marker_completed">#1B6D05</color>
+    <color name="color_phone">#01199E</color>
+    <color name="color_selected">#72B9DB</color>
+</resources>

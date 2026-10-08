@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".TaskInfoActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1">
+
+                <TextView
+                    android:id="@+id/tv_info_label_date1"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="создана"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_info_label_date2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_info_date_create"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="01.09.2026"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_info_to_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date1" />
+
+                <TextView
+                    android:id="@+id/tv_info_label_date2"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="на число"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_info_to_date"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="02.09.2026"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date2" />
+
+                <TextView
+                    android:id="@+id/tv_info_label_date3"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="выполнена"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_info_label_date2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_info_date_complete"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="02.09.2026"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_info_to_date"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="адрес" />
+
+                <TextView
+                    android:id="@+id/tv_info_address"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:padding="8dp"
+                    android:textColorHighlight="@color/color_selected"
+                    android:textColorLink="@color/color_phone"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        style="@style/ThemeTextViewLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="имя" />
+
+                    <TextView
+                        android:id="@+id/tv_info_name"
+                        style="@style/ThemeTextViewInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="не известно" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        style="@style/ThemeTextViewLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="номер" />
+
+                    <TextView
+                        android:id="@+id/tv_info_phone"
+                        style="@style/ThemeTextViewInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="не известен"
+                        android:textColor="@color/primary_textcolor"
+                        android:textColorHighlight="@color/material_dynamic_neutral95"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="заявка" />
+
+                <TextView
+                    android:id="@+id/tv_info_task"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="5"
+                    android:scrollbars="vertical"
+                    android:textColorHint="@color/color_selected"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="выполненые работы" />
+
+                <TextView
+                    android:id="@+id/tv_info_complete"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="7"
+                    android:text="TextView"
+                    android:textColorHighlight="@color/color_selected"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_draw1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" примечания" />
+
+                <TextView
+                    android:id="@+id/tv_info_note"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="7"
+                    android:text="TextView"
+                    android:textColorHighlight="@color/color_selected"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/edittext_draw1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    style="@style/ThemeTextViewLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="полученная сумма" />
+
+                <TextView
+                    android:id="@+id/tv_info_pay"
+                    style="@style/ThemeTextViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_topbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_info_update"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="отправить"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/updateicon" />
+
+        <ImageButton
+            android:id="@+id/btn_info_delete"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="удалить"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_info_update"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/deleteicon" />
+
+        <ImageButton
+            android:id="@+id/btn_info_send"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="отправить"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_info_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shareicon" />
+
+        <ImageButton
+            android:id="@+id/btn_info_phone"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="отправить"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_info_send"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/callicon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

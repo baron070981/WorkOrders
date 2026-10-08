@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Укажите здесь любой яркий цвет, например, черный или насыщенный синий -->
+    <solid android:color="@color/white" />
+    <!-- Толщина курсора (обычно 2dp) -->
+    <size android:width="2dp" />
+</shape>
