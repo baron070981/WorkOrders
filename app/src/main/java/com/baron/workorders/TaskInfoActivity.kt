@@ -135,6 +135,7 @@ class TaskInfoActivity : AppCompatActivity() {
     fun buttonDeleteOnClick(){
         btndelete.setOnClickListener {
             taskviewmodel.deleteTask(task)
+            NotCompletedViewWidget.forceUpdate(this)
             finish()
         }
     }
