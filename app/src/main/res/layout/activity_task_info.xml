@@ -29,77 +29,97 @@
                 android:layout_marginVertical="5dp"
                 android:background="@drawable/edittext_draw1">
 
-                <TextView
-                    android:id="@+id/tv_info_label_date1"
-                    style="@style/ThemeTextViewLabels"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:text="создана"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_info_label_date2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_info_date_create"
-                    style="@style/ThemeTextViewInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="01.09.2026"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_info_to_date"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date1" />
-
-                <TextView
-                    android:id="@+id/tv_info_label_date2"
-                    style="@style/ThemeTextViewLabels"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:text="на число"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_info_date_create">
 
-                <TextView
-                    android:id="@+id/tv_info_to_date"
-                    style="@style/ThemeTextViewInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="02.09.2026"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date2" />
+                    <TextView
+                        android:id="@+id/tv_info_label_date1"
+                        style="@style/ThemeTextViewLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="создана"
+                        android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/tv_info_label_date3"
-                    style="@style/ThemeTextViewLabels"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:text="выполнена"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_info_label_date2"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/tv_info_label_date2"
+                        style="@style/ThemeTextViewLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="на число"
+                        android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/tv_info_date_complete"
-                    style="@style/ThemeTextViewInfo"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tv_info_label_date3"
+                        style="@style/ThemeTextViewLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="выполнена"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="02.09.2026"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_info_to_date"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_info_label_date3" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                    <TextView
+                        android:id="@+id/tv_info_date_create"
+                        style="@style/ThemeTextViewInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:text="01.09.2026"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tv_info_to_date"
+                        style="@style/ThemeTextViewInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:text="02.09.2026"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tv_info_date_complete"
+                        style="@style/ThemeTextViewInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:text="02.09.2026"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_info_to_date" />
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
