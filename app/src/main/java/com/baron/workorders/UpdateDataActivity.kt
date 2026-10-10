@@ -202,17 +202,17 @@ class UpdateDataActivity : AppCompatActivity() {
             return null
         }
 
-        val datecreate = dateCreate.text.toString()
+        val datecreate = dateCreate.text.toString().trim()
         val todate = getStringOrNullFromEditText(toDate)
         val datecomplete = getStringOrNullFromEditText(dateComplete)
         val _city = getStringOrNullFromEditText(city, true)
-        val _street = street.text.toString().capitalizeWords()
-        val _house = house.text.toString()
+        val _street = street.text.toString().capitalizeWords().trim()
+        val _house = house.text.toString().trim()
         val _apartment = getStringOrNullFromEditText(apartment)
         val _address = getStringOrNullFromEditText(address)
         val name = getStringOrNullFromEditText(clientName, true)
         val phone = getStringOrNullFromEditText(clientPhone)
-        val _task = task.text.toString()
+        val _task = task.text.toString().trim()
         val completedworks = getStringOrNullFromEditText(completedWorks)
         val _note = getStringOrNullFromEditText(note)
         val _pay = getDoubleOrNull(pay.text)

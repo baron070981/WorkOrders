@@ -111,17 +111,17 @@ class InsertDataActivity : AppCompatActivity() {
             return null
         }
 
-        val datecreate = dateCreate.text.toString()
-        val todate = getValueFromEditText(toDate)
-        val _city = getValueFromEditText(city, true)
-        val _street = street.text.toString().capitalizeWords()
-        val _house = house.text.toString()
-        val _apartment = getValueFromEditText(apartment)
-        val _address = getValueFromEditText(address)
-        val name = getValueFromEditText(clientName, true)
-        val phone = getValueFromEditText(clientPhone)
-        val _task = task.text.toString()
-        val _note = getValueFromEditText(note)
+        val datecreate = dateCreate.text.toString().trim()
+        val todate = getStringOrNullFromEditText(toDate)
+        val _city = getStringOrNullFromEditText(city, true)
+        val _street = street.text.toString().capitalizeWords().trim()
+        val _house = house.text.toString().trim()
+        val _apartment = getStringOrNullFromEditText(apartment)
+        val _address = getStringOrNullFromEditText(address)
+        val name = getStringOrNullFromEditText(clientName, true)
+        val phone = getStringOrNullFromEditText(clientPhone)
+        val _task = task.text.toString().trim()
+        val _note = getStringOrNullFromEditText(note)
 
         return Task(
             date_receipt = datecreate, date_scheduled = todate, date_complete = null, city=_city, street=_street,
@@ -132,8 +132,8 @@ class InsertDataActivity : AppCompatActivity() {
 
     private fun getValueFromEditText(et: EditText, capitalize: Boolean=false): String? {
         if (et.text.toString().isEmpty()) return null
-        if (capitalize) return et.text.toString().capitalizeWords()
-        return et.text.toString()
+        if (capitalize) return et.text.toString().capitalizeWords().trim()
+        return et.text.toString().trim()
     }
 
 
