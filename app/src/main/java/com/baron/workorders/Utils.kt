@@ -36,9 +36,9 @@ fun setTextPosition(et: EditText){
 }
 
 fun getStringOrNullFromEditText(et: EditText, capitalize: Boolean=false): String? {
-    if (et.text.toString().isEmpty()) return null
-    if (capitalize) return et.text.toString().capitalizeWords()
-    return et.text.toString()
+    if (et.text.toString().trim().isEmpty()) return null
+    if (capitalize) return et.text.toString().capitalizeWords().trim()
+    return et.text.toString().trim()
 }
 
 fun getDoubleOrNull(v: String?): Double?{
