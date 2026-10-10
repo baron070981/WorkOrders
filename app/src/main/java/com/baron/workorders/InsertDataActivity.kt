@@ -129,13 +129,9 @@ class InsertDataActivity : AppCompatActivity() {
             task = _task, note = _note, completed = null, materials = null, pay = null, isComplete = false
         )
     }
-
-    private fun getValueFromEditText(et: EditText, capitalize: Boolean=false): String? {
-        if (et.text.toString().isEmpty()) return null
-        if (capitalize) return et.text.toString().capitalizeWords().trim()
-        return et.text.toString().trim()
-    }
-
-
-
 }
+
+
+
+
+
