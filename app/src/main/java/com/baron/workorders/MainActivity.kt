@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
 
     private val onBackPressedCallback = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() {
+            taskadapter.clearSeletion()
             showButtonAdd()
         }
     }
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
         listtasks.layoutManager = LinearLayoutManager(this)
         listtasks.adapter = taskadapter
         listtasks.setOnClickListener { showButtonAdd() }
-        rootLayout.setOnClickListener { showButtonAdd() }
+        rootLayout.setOnClickListener { showButtonAdd(); taskadapter.clearSeletion() }
 
         val spinnerviewcontentadapter = ArrayAdapter(
             this,

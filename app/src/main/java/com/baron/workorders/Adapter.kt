@@ -25,6 +25,9 @@ const val MAX_LEN_TASK_INFO = 25
 class TaskAdapter(private val menuClickListener: OnMenuListener,
                   private val onItemClicked:(Task)->Unit):
     ListAdapter<Task, TaskAdapter.TaskViewHolder>(TaskDiffCallback()) {
+
+    private var selectedPos: Int = -1
+
     // ViewHolder удерживает ссылки на View каждого элемента
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvdate: TextView = itemView.findViewById(R.id.tv_item_create_date)
@@ -37,6 +40,7 @@ class TaskAdapter(private val menuClickListener: OnMenuListener,
         val labelDateComplete: TextView = itemView.findViewById(R.id.tv_label_date_complete)
         val markerPhone: ImageView = itemView.findViewById(R.id.iv_item_marker_phone)
 
+        // создание строки с адресом
         fun createAddress(task: Task): String{
             var addressString: String = ""
             val street = task.street
@@ -98,14 +102,38 @@ class TaskAdapter(private val menuClickListener: OnMenuListener,
     // Заполняет ViewHolder данными для конкретной позиции
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = getItem(position)
+
+        if (selectedPos == position){
+            holder.itemView.setBackgroundResource(R.drawable.item_element_selected_draw)
+        }
+        else {
+            holder.itemView.setBackgroundResource(R.drawable.item_element_draw)
+        }
+
         holder.itemView.setOnClickListener {
+            clearSeletion() // снимает выделение при нажатии на элемент списка
             onItemClicked(task)
         }
         holder.itemView.setOnLongClickListener { view ->
+            // выделение при долгом нажатии
+            val prev = selectedPos
+            selectedPos = holder.bindingAdapterPosition
+            notifyItemChanged(prev)
+            notifyItemChanged(selectedPos)
+
             menuClickListener.onLongClick(position, task)
             true
         }
         holder.bind(task, position+1)
+    }
+
+    // снятие выделения
+    fun clearSeletion(){
+        if (selectedPos != -1){
+            val prev = selectedPos
+            selectedPos = -1
+            notifyItemChanged(prev)
+        }
     }
 }
 
