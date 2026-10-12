@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:layout_marginHorizontal="5dp"
-    android:layout_marginBottom="3dp"
+    android:layout_marginVertical="3dp"
     android:background="@drawable/item_element_draw"
     app:layout_constrainedHeight="true">
 
@@ -14,7 +14,7 @@
         android:id="@+id/vmarker"
         android:layout_width="10dp"
         android:layout_height="160dp"
-        android:background="@color/marker_completed"
+        android:background="@color/marker_complete_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="01.01.2026"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintStart_toEndOf="@+id/vmarker"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -37,7 +37,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="01.01.2026"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_date_complete" />
 
@@ -50,7 +50,7 @@
         android:layout_marginEnd="16dp"
         android:lines="2"
         android:text="address"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         android:textIsSelectable="false"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -66,7 +66,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:text="task content"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         android:textIsSelectable="false"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -81,7 +81,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="01.01.2026"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintStart_toEndOf="@+id/tv_item_create_date"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_label_to_date" />
 
@@ -92,7 +92,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="создана"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintStart_toEndOf="@+id/vmarker"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,7 +103,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="на какое"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintStart_toEndOf="@+id/tv_item_create_date"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +114,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="сделана"
-        android:textColor="@color/primary_textcolor"
+        android:textColor="@color/main_textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

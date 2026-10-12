@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/main_background"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,7 +45,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginBottom="8dp"
             android:text="не выполнено:"
-            android:textColor="@color/not_completed"
+            android:textColor="@color/bars_text_color"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/et_search"

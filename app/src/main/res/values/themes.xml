@@ -8,12 +8,12 @@
     <style name="Theme.WorkOrders" parent="Base.Theme.WorkOrders" />
 
     <style name="ThemeEditTextInputTask" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/primary_textcolor</item>
+        <item name="android:textColor">@color/main_textcolor</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingVertical">5dp</item>
         <item name="android:paddingHorizontal">10dp</item>
-        <item name="android:textColorHint">#C846569D</item>
+        <item name="android:textColorHint">@color/hintcolor_on_mainbg</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textCursorDrawable">@drawable/cursor_draw</item>
@@ -24,13 +24,13 @@
         <item name="android:textSize">16sp</item>
         <item name="android:paddingVertical">5px</item>
         <item name="android:paddingHorizontal">5px</item>
-        <item name="android:textColorHint">#BAE2E2E4</item>
+        <item name="android:textColorHint">@color/hintcolor_on_barsbg</item>
         <item name="android:gravity">center</item>
         <item name="android:textCursorDrawable">@drawable/cursor_draw_white</item>
     </style>
 
     <style name="ThemeTextViewLabelsInputTask" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/primary_textcolor</item>
+        <item name="android:textColor">@color/main_textcolor</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">5dp</item>
@@ -38,13 +38,13 @@
 
     <style name="ThemeTextViewLabels" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/primary_textcolor</item>
+        <item name="android:textColor">@color/main_textcolor</item>
         <item name="android:padding">5dp</item>
     </style>
 
     <style name="ThemeTextViewInfo" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/primary_textcolor</item>
+        <item name="android:textColor">@color/main_textcolor</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">5dp</item>
     </style>

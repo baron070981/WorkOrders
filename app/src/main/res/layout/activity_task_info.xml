@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/main_background"
     tools:context=".TaskInfoActivity">
 
     <ScrollView
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:text="не известен"
-                        android:textColor="@color/primary_textcolor"
+                        android:textColor="@color/main_textcolor"
                         android:textColorHighlight="@color/material_dynamic_neutral95"
                         android:textIsSelectable="true" />
                 </LinearLayout>
