@@ -1,13 +1,9 @@
 package com.baron.workorders
 
 
-import android.content.Intent
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -74,11 +70,11 @@ class TaskAdapter(private val menuClickListener: OnMenuListener,
                 tvtodate.visibility = View.VISIBLE
             }
             if (!task.isComplete || task.completed == null){
-                marker.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.marker_not_complete))
+                marker.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.marker_not_complete_color))
                 labelDateComplete.setText("")
             }
             else {
-                marker.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.marker_completed))
+                marker.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.marker_complete_color))
                 labelDateComplete.setText("выполнена")
             }
             if (task.phone == null){
