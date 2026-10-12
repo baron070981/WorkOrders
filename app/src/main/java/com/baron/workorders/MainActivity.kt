@@ -41,10 +41,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
     lateinit var taskadapter: TaskAdapter
     private var selectedItemPosition = -1 //
     private var selectedTask: Task? = null //
-//    private var counterTasks: String = "" //
     private val menuviewcontent = listOf("все заявки", "в работе", "сделано")
-    private var countNotComplete = 0
-    private var countComplete = 0
 
     private val taskviewmodel: TaskViewModel by viewModels {
         TaskViewModelFactory((application as DataBaseApp).repo)
@@ -75,7 +72,6 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
 
         tvCountTasks = binding.tvNotcompleteCount
         listtasks = binding.listnotes as RecyclerView
@@ -173,6 +169,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
 
     private fun clickButtonEdit(){
         /** переход в активити редактирования записи */
+        taskadapter.clearSeletion()
         if (selectedTask == null) return
         val intent = Intent(this, UpdateDataActivity::class.java)
         intent.putExtra(IntentKeys.MAIN_UPDATE_ID, selectedTask!!.id)
@@ -207,6 +204,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
 
     private fun clickButtonDelete(){
         /* удаление записи */
+        taskadapter.clearSeletion()
         taskviewmodel.deleteTask(selectedTask!!)
         NotCompletedViewWidget.forceUpdate(this)
         showButtonAdd()
