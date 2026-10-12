@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
     private lateinit var btnphone: ImageButton
     private lateinit var btndelete: ImageButton
     private lateinit var btnedit: ImageButton
+    private lateinit var btnselectdate: ImageButton
     private lateinit var tvCountTasks: TextView
     lateinit var taskadapter: TaskAdapter
     private var selectedItemPosition = -1 //
@@ -81,6 +82,11 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
         btndelete = binding.btnBottomDelete
         btnsend = binding.btnBottomSend
         btnphone = binding.btnBottomPhone
+        btnselectdate = binding.btnSelectDate.apply {
+            setOnClickListener {
+                showDatePicker(this@MainActivity, search)
+            }
+        }
         btnadd = binding.btnadd.apply {clearColorFilter()}
         spinnerviewcontent = binding.spinnerViewContent
 
