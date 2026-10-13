@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
     private lateinit var btnedit: ImageButton
     private lateinit var btnselectdate: ImageButton
     private lateinit var tvCountTasks: TextView
+    private lateinit var llspinner: LinearLayout
+    private lateinit var llsearch: LinearLayout
     lateinit var taskadapter: TaskAdapter
     private var selectedItemPosition = -1 //
     private var selectedTask: Task? = null //
@@ -82,6 +85,8 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
         btndelete = binding.btnBottomDelete
         btnsend = binding.btnBottomSend
         btnphone = binding.btnBottomPhone
+        llspinner = binding.llSpinner
+        llsearch = binding.llSearch
         btnselectdate = binding.btnSelectDate.apply {
             setOnClickListener {
                 showDatePicker(this@MainActivity, search)
@@ -144,6 +149,8 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
         btndelete.apply { visibility = View.GONE; isEnabled = false }
         btnsend.apply { visibility = View.GONE; isEnabled = false }
         btnphone.apply { visibility = View.GONE; isEnabled = false }
+        llspinner.apply { visibility = View.VISIBLE }
+        llsearch.apply { visibility = View.VISIBLE }
         selectedTask = null
         selectedItemPosition = -1
         onBackPressedCallback.isEnabled = false
@@ -159,6 +166,9 @@ class MainActivity : AppCompatActivity(), OnMenuListener{
         btnsend.apply { visibility = View.VISIBLE; isEnabled = true }
         if (phone != null) btnphone.apply { visibility = View.VISIBLE; isEnabled = true }
         else btnphone.apply { visibility = View.GONE; isEnabled = false }
+        llspinner.apply { visibility = View.INVISIBLE }
+        llsearch.apply { visibility = View.INVISIBLE }
+
         onBackPressedCallback.isEnabled = true
     }
 
