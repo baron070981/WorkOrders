@@ -13,7 +13,7 @@
         android:id="@+id/tv_update_title_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bg_topbar"
+        android:background="@color/bars_background"
         android:paddingVertical="10dp"
         android:text="РЕДАКТИРОВАНИЕ ЗАЯВКИ"
         android:textAlignment="center"

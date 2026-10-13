@@ -3,25 +3,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_background">#E0FDFD</color>
-    <color name="main_textcolor">#2F3856</color>
+    <color name="main_textcolor">#09163E</color>
     <color name="item_background">#ffffffff</color>
     <color name="item_selected_background">#E7EDEC</color>
     <color name="item_border_color">@color/black</color>
     <color name="item_selected_border_color">#4A7AF4</color>
     <color name="marker_not_complete_color">#BA0909</color>
     <color name="marker_complete_color">#1B6D05</color>
-    <color name="bg_topbar">#3E3E40</color>
+    <color name="bars_background">#3E3E40</color>
     <color name="border_on_barsbg">#84F2E8</color>
     <color name="border_on_mainbg">#475281</color>
     <color name="color_phone">#01199E</color>
     <color name="color_selected">#72B9DB</color>
     <color name="hintcolor_on_mainbg">#AA46569D</color>
     <color name="hintcolor_on_barsbg">#ADC7C1</color>
-
-
-    <color name="item_text_color">#ffffffff</color>
-    <color name="bars_background">#ffffffff</color>
     <color name="bars_text_color">#ffffffff</color>
-
-
 </resources>
